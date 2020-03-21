@@ -1,0 +1,26 @@
+<div class="card" style="width: 80rem" >
+  <div class="card-body" style="background-color:#ffffff;">
+<table *ngIf="movies" class="table">
+  <thead class="thead-dark">
+  <tr>
+    <th>id</th>
+    <th>First_Name</th>
+    <th >Last_Name</th>
+    <th >Address</th>
+    <th >City</th>
+    <th >State</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let a of Customer">
+    <td>{{a.id}}</td>
+    <td><a class="btn btn-link" [routerLink]="['/updateCustomer',a.id]" role="button">{{a.First_Name}}</a></td>
+    <td>{{a.Last_Name}}</td>
+    <td>{{a.Address}}</td>
+    <td>{{a.City}}</td>
+    <td>{{a.State}}</td>
+  </tr>
+</tbody>
+</table>
+</div>
+</div>
